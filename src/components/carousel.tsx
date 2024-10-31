@@ -21,7 +21,7 @@ export function CarouselPage() {
 			}}
 			plugins={[
 				Autoplay({
-					delay: 1000,
+					delay: 3000,
 				}),
 			]}
 			className='w-full flex gap-4 overflow-x-auto overflow-hidden'
