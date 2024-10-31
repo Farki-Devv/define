@@ -14,7 +14,7 @@ type BoardData = {
 import { Card, CardContent } from '@/components/ui/card'
 import { DragDropContext, Draggable, Droppable } from '@hello-pangea/dnd'
 import React, { useState } from 'react'
-// trello-board component
+// this file returns us a trelloBoard to change the array
 const TrelloBoard: React.FC = () => {
 	const [data, setData] = useState<BoardData>({
 		backlog: [
@@ -108,8 +108,8 @@ const TrelloBoard: React.FC = () => {
 											snapshot.isDragging ? 'shadow-lg' : ''
 										}`}
 									>
-										<CardContent className='px-2 py-1.5 w-[11.625rem] h-[3.938rem]'>
-											<div className='font-normal text-[0.625rem] text-[#A1A1AA]'>
+										<CardContent className='px-2 py-1.5 w-[11.625rem] h-[3.938rem] hover:scale-105 transition-all'>
+											<div className='font-normal text-[0.625rem] text-[#A1A1AA] '>
 												{task.type}
 											</div>
 											<div className='text-xs font-medium'>{task.title}</div>

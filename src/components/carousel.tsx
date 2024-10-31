@@ -1,4 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
+// this file has a carousel component that returns a slide to us
 import {
 	Carousel,
 	CarouselContent,

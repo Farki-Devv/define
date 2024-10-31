@@ -18,8 +18,7 @@ const pricing = [
 		name: 'Pause or cancel anytime',
 	},
 ]
-
-// Pricing component
+// This file returns information about our pricing component
 export default function Pricing() {
 	return (
 		<div className='max-w-[40rem] mx-auto px-4 space-y-6'>
@@ -31,7 +30,6 @@ export default function Pricing() {
 					both.
 				</p>
 			</div>
-
 			<div className='w-[312px] h-[27.438rem] bg-[#FFFFFF] m-auto rounded-2xl drop-shadow py-4 p-[0.688rem] flex flex-col gap-8'>
 				<div className='flex flex-col gap-1.5'>
 					<div className='w-full justify-between'>

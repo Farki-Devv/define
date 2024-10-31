@@ -4,7 +4,7 @@ import Link from 'next/link'
 import { useState } from 'react'
 import ChatMessages from './chat-messages'
 import TrelloBoard from './trello-board'
-// How it component
+
 function HowIt() {
 	const [logoOpen, setLogoOpen] = useState<boolean>(true)
 
@@ -38,10 +38,10 @@ function HowIt() {
 									src='/logomain.svg'
 									alt=''
 									onClick={() => setLogoOpen(!logoOpen)}
-									className='m-auto animate-bounce cursor-pointer'
+									className='m-auto animate-pulse cursor-pointer'
 								/>
 							) : (
-								<div className='mt-[48px] max-w-[11.625rem] mx-auto shadow-lg rounded-md p-2'>
+								<div className='mt-[48px] animista-two max-w-[11.625rem] mx-auto shadow-lg rounded-md p-2'>
 									<h1 className='text-[0.625rem] font-normal text-[#A1A1AA]'>
 										Mete @ Define
 									</h1>

@@ -13,12 +13,12 @@ body {
 }
 /* Custom CSS */
 .scrollbar-hidden::-webkit-scrollbar {
-  display: none; /* Chrome, Safari, Opera */
+	display: none; /* Chrome, Safari, Opera */
 }
 
 .scrollbar-hidden {
-  -ms-overflow-style: none; /* Internet Explorer 10+ */
-  scrollbar-width: none; /* Firefox */
+	-ms-overflow-style: none; /* Internet Explorer 10+ */
+	scrollbar-width: none; /* Firefox */
 }
 
 @layer base {
@@ -82,5 +82,35 @@ body {
 	}
 	body {
 		@apply bg-background text-foreground;
+	}
+}
+
+.animista {
+	-webkit-animation: slide-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+	animation: slide-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+.animista-two {
+	-webkit-animation: animista-two 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+	animation: animista-two 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+@keyframes slide-top {
+	0% {
+		-webkit-transform: translateY(0);
+		transform: translateY(0);
+	}
+	100% {
+		-webkit-transform: translateY(-100px);
+		transform: translateY(-2px);
+	}
+}
+
+@keyframes animista-two {
+	0% {
+		-webkit-transform: translateY(0);
+		transform: translateY(0);
+	}
+	100% {
+		-webkit-transform: translateY(-100px);
+		transform: translateY(-20px);
 	}
 }

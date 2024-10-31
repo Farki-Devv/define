@@ -1,6 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import { Button } from './ui/button'
-// hero component
+// The hero component can get information about us from this file
 function Hero() {
 	return (
 		<div className='max-w-[40rem] mx-auto py-[5.875rem] flex flex-col gap-[1.375rem]'>

@@ -1,5 +1,5 @@
 import { Button } from './ui/button'
-//  contact component
+//  this file is a contact component to contact us
 function Contact() {
 	return (
 		<div className='max-w-[40rem] mx-auto p-[5.875rem] text-center flex-col flex justify-center gap-6'>
@@ -13,11 +13,10 @@ function Contact() {
 				</Button>
 			</div>
 			<p className='text-[#A2A2A2] text-sm'>
-				Or drop us an email:{' '}
+				Or drop us an email:
 				<span className='text-[#101010]'>hi@usedefine.com</span>
 			</p>
 		</div>
 	)
 }
-
 export default Contact

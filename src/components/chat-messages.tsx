@@ -4,6 +4,7 @@
  * @file chat-messages.tsx
  * @description this file return chat messages component
  */
+// this component returns a message to our how it component
 import { useState } from 'react'
 
 type Message = {
@@ -23,11 +24,9 @@ const initialMessages: Message[] = [
 		type: 'sent',
 	},
 ]
-
 export default function ChatMessages() {
 	const [messages, setMessages] = useState<Message[]>(initialMessages)
 	const [active, setActive] = useState(false)
-
 	return (
 		<div className='max-w-[24.625rem] shadow-lg w-full rounded-lg py-4 px-3.5 flex  flex-col items-center'>
 			<div className='mt-6'>
@@ -49,7 +48,7 @@ export default function ChatMessages() {
 			</div>
 
 			{active && (
-				<div className='-mt-2 w-[20rem] h-[5.313rem] border-2 border-[#30A46C] bg-[#30A46C1A] p-1.5 rounded-lg drop-shadow flex gap-2'>
+				<div className='animista -mt-2 transition-all w-[20rem] h-[5.313rem] border-2 border-[#30A46C] bg-[#30A46C1A] p-1.5 rounded-lg drop-shadow flex gap-2'>
 					<img src='/Avatar.png' alt='' className='size-6' />
 					<div className='flex flex-col'>
 						<span className='text-[10px] text-[#30A46C]'>Define</span>
