@@ -24,7 +24,7 @@ export function CarouselPage() {
 					delay: 1000,
 				}),
 			]}
-			className='w-full flex gap-4 overflow-x-auto'
+			className='w-full flex gap-4 overflow-x-auto overflow-hidden'
 		>
 			<CarouselContent className='flex'>
 				{images.map((src, index) => (

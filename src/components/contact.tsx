@@ -14,7 +14,9 @@ function Contact() {
 			</div>
 			<p className='text-[#A2A2A2] text-sm'>
 				Or drop us an email:
-				<span className='text-[#101010]'>hi@usedefine.com</span>
+				<a href='mailto:hi@usedefine.com?' target='_blank'>
+					<span className='text-[#101010]'>hi@usedefine.com</span>
+				</a>
 			</p>
 		</div>
 	)
