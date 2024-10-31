@@ -10,7 +10,7 @@ function HowIt() {
 
 	return (
 		<div className='flex flex-col gap-4'>
-			<div className='flex max-w-[40rem] mx-auto py-[5.875rem] flex-col gap-4'>
+			<div className='flex max-w-[40rem] mx-auto  flex-col gap-4'>
 				<div className='flex flex-col'>
 					<span className='text-2xl text-center'>How it works</span>
 					<span className='text-sm text-neutral-400 text-center'>

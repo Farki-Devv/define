@@ -28,7 +28,7 @@ export default function ChatMessages() {
 	const [messages, setMessages] = useState<Message[]>(initialMessages)
 	const [active, setActive] = useState(false)
 	return (
-		<div className='max-w-[24.625rem] shadow-lg w-full rounded-lg py-4 px-3.5 flex  flex-col items-center'>
+		<div className='max-w-[24.625rem] shadow-lg w-full rounded-lg py-4 px-3.5 flex flex-col items-center'>
 			<div className='mt-6'>
 				{messages.map(message => (
 					<div
