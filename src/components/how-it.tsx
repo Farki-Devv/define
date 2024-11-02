@@ -70,7 +70,7 @@ function HowIt() {
 								notify you fast.
 							</p>
 							<div className=''>
-								<img src='/clock.png' alt='' />
+								<img src='/clock-frame.png' alt='' />
 							</div>
 						</div>
 						<ChatMessages />

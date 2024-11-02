@@ -7,7 +7,7 @@ function Contact() {
 			<div>
 				<Button
 					variant='outline'
-					className='w-fit rounded-2xl border-none bg-gray-100 hover:bg-gray-100'
+					className='w-fit text-sm border-none bg-colors-customColor rounded-full'
 				>
 					Schedule a Call
 				</Button>

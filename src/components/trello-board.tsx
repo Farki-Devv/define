@@ -104,11 +104,11 @@ const TrelloBoard: React.FC = () => {
 										ref={provided.innerRef}
 										{...provided.draggableProps}
 										{...provided.dragHandleProps}
-										className={`bg-[#FAFAFA] border-none shadow-md ${
+										className={`bg-[#FAFAFA] border-none shadow-md hover:scale-105 transition-all ${
 											snapshot.isDragging ? 'shadow-lg' : ''
 										}`}
 									>
-										<CardContent className='px-2 py-1.5 w-[11.625rem] h-[3.938rem] hover:scale-105 transition-all'>
+										<CardContent className='px-2 py-1.5 w-[11.625rem] h-[3.938rem] transition-all'>
 											<div className='font-normal text-[0.625rem] text-[#A1A1AA] '>
 												{task.type}
 											</div>

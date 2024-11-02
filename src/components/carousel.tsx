@@ -7,11 +7,13 @@ import {
 	CarouselNext,
 	CarouselPrevious,
 } from '@/components/ui/carousel'
-import Autoplay from 'embla-carousel-autoplay'
-
 export function CarouselPage() {
 	// Rasmlarni massivga saqlaymiz
-	const images = ['/my-slide.png', '/my-slide2.png', '/my-slide3.png']
+	const images = [
+		{ url: '/my-slide.png', name: 'Tapped AI' },
+		{ url: '/my-slide2.png', name: 'Crime-Club' },
+		{ url: '/my-slide3.png', name: 'Crime-Club' },
+	]
 
 	return (
 		<Carousel
@@ -19,25 +21,23 @@ export function CarouselPage() {
 				align: 'center',
 				loop: true,
 			}}
-			plugins={[
-				Autoplay({
-					delay: 3000,
-				}),
-			]}
-			className='w-full flex gap-4 overflow-x-auto overflow-hidden'
+			className='w-full max-w-[1440px] h-[400px] mx-auto flex gap-4 overflow-x-auto overflow-hidden'
 		>
-			<CarouselContent className='flex'>
+			<CarouselContent className='flex h-[400px] gap-4 px-2'>
 				{images.map((src, index) => (
 					<CarouselItem
 						key={index}
-						className='flex gap-5 md:basis-1/3 lg:basis-1/3 py-14 mt-0.5 px-12'
+						className='flex md:basis-1/2 lg:basis-1/3 mt-0.5'
 					>
-						<div className='rounded-2xl shadow-lg bg-white flex items-center justify-center w-[40rem] h-[22.5rem]'>
-							<img
-								src={src}
-								alt={`Slide ${index + 1}`}
-								className='rounded-2xl object-contain'
-							/>
+						<div className='rounded-2xl shadow-lg bg-white items-center justify-center w-[40rem] h-[22.5rem]'>
+							<div className='flex flex-col gap-4'>
+								<img
+									src={src.url}
+									alt={`Slide ${index + 1}`}
+									className='rounded-2xl object-contain'
+								/>
+								<span className='text-[#A2A2A2] text-sm'>{src.name}</span>
+							</div>
 						</div>
 					</CarouselItem>
 				))}

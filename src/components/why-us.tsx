@@ -1,7 +1,22 @@
+'use client'
+import React, { useRef } from 'react';
+
 // this file returns information about why you choose us
 function WhyUs() {
+	const containerRef = useRef<HTMLDivElement | null>(null);
+
+	const scrollToImage = (direction: 'top' | 'bottom') => {
+		if (containerRef.current) {
+			const offset = direction === 'top' ? 0 : containerRef.current.scrollHeight;
+			containerRef.current.scrollTo({
+				top: offset,
+				behavior: 'smooth',
+			});
+		}
+	};
+
 	return (
-		<div className='flex flex-col max-h-[100vh] gap-3 max-w-[40rem] mx-auto'>
+		<div className='flex flex-col max-h-[100vh] gap-3 max-w-[40rem] mx-auto drops'>
 			<div className='flex flex-col'>
 				<span className='text-2xl text-center'>Why us</span>
 				<span className='text-sm text-neutral-400 text-center'>
@@ -10,12 +25,25 @@ function WhyUs() {
 					sales, marketing, and connecting with your users.
 				</span>
 			</div>
-			<div className='flex flex-col items-center justify-center bg-white h-[307px] rounded-2xl py-[10px] px-[56px] overflow-y-auto scrollbar-hidden'>
-				<img src='./Before.png' alt='' className='w-[292px] mt-80' />
-				<img src='./After.png' alt='' />
+			<div 
+				ref={containerRef} 
+				className='flex flex-col items-center justify-center bg-white drop-shadow h-[307px] rounded-2xl py-[10px] px-[56px] overflow-hidden scrollbar-hidden'
+			>
+				<img
+					src='./Before.png'
+					alt='Before'
+					className='w-[292px] cursor-pointer mt-[310px]'
+					onClick={() => scrollToImage('bottom')}
+				/>
+				<img
+					src='./After.png'
+					alt='After'
+					className='cursor-pointer'
+					onClick={() => scrollToImage('top')}
+				/>
 			</div>
 		</div>
-	)
+	);
 }
 
-export default WhyUs
+export default WhyUs;

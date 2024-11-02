@@ -33,7 +33,9 @@ export default function ChatMessages() {
 				{messages.map(message => (
 					<div
 						key={message.id}
-						className={`w-[240px] h-[69px] bg-[#FAFAFA] p-1.5 rounded-lg drop-shadow flex gap-2 cursor-pointer`}
+						className={`w-[240px] ${
+							active ? 'w-[230px] animista-two' : ''
+						} h-[69px] bg-[#FAFAFA] p-1.5 rounded-lg drop-shadow flex gap-2 cursor-pointer`}
 						onClick={() => setActive(!active)}
 					>
 						<img src={message.avatar} alt='' className='size-5' />
@@ -46,7 +48,6 @@ export default function ChatMessages() {
 					</div>
 				))}
 			</div>
-
 			{active && (
 				<div className='animista -mt-2 transition-all w-[20rem] h-[5.313rem] border-2 border-[#30A46C] bg-[#30A46C1A] p-1.5 rounded-lg drop-shadow flex gap-2'>
 					<img src='/Avatar.png' alt='' className='size-6' />
@@ -59,7 +60,7 @@ export default function ChatMessages() {
 					</div>
 				</div>
 			)}
-			<div>
+			<div className='absolute w-[365px] mt-44'>
 				<h1 className='text-sm mt-6 text-start'>Direct Contact</h1>
 				<p className='text-[#A2A2A2] text-sm'>
 					Communication’s easy—you’ll work one-on-one with a designer from our
