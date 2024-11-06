@@ -4,11 +4,8 @@ import {
 	Carousel,
 	CarouselContent,
 	CarouselItem,
-	CarouselNext,
-	CarouselPrevious,
 } from '@/components/ui/carousel'
 export function CarouselPage() {
-	// Rasmlarni massivga saqlaymiz
 	const images = [
 		{ url: '/my-slide.png', name: 'Tapped AI' },
 		{ url: '/my-slide2.png', name: 'Crime-Club' },
@@ -21,29 +18,27 @@ export function CarouselPage() {
 				align: 'center',
 				loop: true,
 			}}
-			className='w-full max-w-[1440px] h-[400px] mx-auto flex gap-4 overflow-x-auto overflow-hidden'
+			className='w-full px-2 py-12 mt-4 mx-auto flex gap-4 overflow-x-auto overflow-hidden'
 		>
-			<CarouselContent className='flex h-[400px] gap-4 px-2'>
+			<CarouselContent className='flex gap-4 px-2'>
 				{images.map((src, index) => (
 					<CarouselItem
 						key={index}
-						className='flex md:basis-1/2 lg:basis-1/3 mt-0.5'
+						className='flex flex-col gap-1 md:gap-4 md:basis-1/2 lg:basis-1/2 mt-0.5 drop-shadow'
 					>
-						<div className='rounded-2xl shadow-lg bg-white items-center justify-center w-[40rem] h-[22.5rem]'>
+						<div className='rounded-lg md:rounded-2xl max-md:w-[200px] max-lg:w-[400px] lg:w-[640px] 2xl:w-full shadow-lg bg-white items-center justify-center w-full h-full'>
 							<div className='flex flex-col gap-4'>
 								<img
 									src={src.url}
 									alt={`Slide ${index + 1}`}
 									className='rounded-2xl object-contain'
 								/>
-								<span className='text-[#A2A2A2] text-sm'>{src.name}</span>
 							</div>
 						</div>
+						<span className='text-[#A2A2A2] max-md:text-[10px] text-sm'>{src.name}</span>
 					</CarouselItem>
 				))}
 			</CarouselContent>
-			<CarouselPrevious />
-			<CarouselNext />
 		</Carousel>
 	)
 }

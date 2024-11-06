@@ -76,7 +76,6 @@ const TrelloBoard: React.FC = () => {
 			})
 		}
 	}
-
 	const TaskList: React.FC<{
 		tasks: TaskType[]
 		droppableId: string
@@ -96,7 +95,6 @@ const TrelloBoard: React.FC = () => {
 								Drop here
 							</div>
 						)}
-
 						{tasks.map((task, index) => (
 							<Draggable key={task.id} draggableId={task.id} index={index}>
 								{(provided, snapshot) => (
@@ -104,15 +102,17 @@ const TrelloBoard: React.FC = () => {
 										ref={provided.innerRef}
 										{...provided.draggableProps}
 										{...provided.dragHandleProps}
-										className={`bg-[#FAFAFA] border-none shadow-md hover:scale-105 transition-all ${
+										className={`bg-[#FAFAFA] rounded-[6px] border-none shadow-md hover:scale-105 transition-all ${
 											snapshot.isDragging ? 'shadow-lg' : ''
 										}`}
 									>
-										<CardContent className='px-2 py-1.5 w-[11.625rem] h-[3.938rem] transition-all'>
+										<CardContent className='px-2 py-1.5 w-[11.625rem] max-md:w-[100px] h-[3.938rem] transition-all'>
 											<div className='font-normal text-[0.625rem] text-[#A1A1AA] '>
 												{task.type}
 											</div>
-											<div className='text-xs font-medium'>{task.title}</div>
+											<div className='text-xs max-md:text-[8px] max-md:leading-3 font-medium text-[#494950]'>
+												{task.title}
+											</div>
 										</CardContent>
 									</Card>
 								)}
@@ -138,7 +138,6 @@ const TrelloBoard: React.FC = () => {
 					</h2>
 					<TaskList tasks={data.backlog} droppableId='backlog' />
 				</div>
-
 				{/* In Progress Column */}
 				<div className='w-full'>
 					<h2 className='flex items-center gap-2 mb-2'>

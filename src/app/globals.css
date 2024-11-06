@@ -82,7 +82,7 @@ body {
 	}
 	.svg-path:hover {
 		fill-opacity: 1;
-		@apply fill-gray-900;
+		@apply fill-blue-600;
 	}
 	body {
 		@apply bg-background text-foreground;

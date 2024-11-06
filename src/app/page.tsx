@@ -10,7 +10,7 @@ import WhyUs from '@/components/why-us'
 
 function Home() {
 	return (
-		<div className='flex flex-col gap-[80px] home mx-auto'>
+		<div className='flex flex-col gap-[84px] home mx-auto px-4'>
 			<Navbar />
 			<Hero />
 			<CarouselPage />

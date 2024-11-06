@@ -7,12 +7,12 @@ function Contact() {
 			<div>
 				<Button
 					variant='outline'
-					className='w-fit text-sm border-none bg-colors-customColor rounded-full'
+					className='w-[134px] h-10 text-sm border-none bg-colors-customColor rounded-full'
 				>
 					Schedule a Call
 				</Button>
 			</div>
-			<p className='text-[#A2A2A2] text-sm'>
+			<p className='text-[#A2A2A2] text-sm flex max-md:flex-col gap-2 justify-center'>
 				Or drop us an email:
 				<a href='mailto:hi@usedefine.com?' target='_blank'>
 					<span className='text-[#101010]'>hi@usedefine.com</span>

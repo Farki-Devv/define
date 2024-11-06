@@ -21,7 +21,7 @@ function HowIt() {
 				</div>
 				<div className='flex flex-col gap-3'>
 					<div className='flex gap-3 max-sm:flex-col'>
-						<div className='max-w-[24.625rem] h-[19.5rem] shadow-lg w-full rounded-2xl pt-4 px-3.5 overflow-hidden'>
+						<div className='md:w-[24.625rem] h-[19.5rem] shadow-lg rounded-2xl pt-4 px-3.5 overflow-hidden'>
 							<h1 className='text-sm'>Shared Trello board</h1>
 							<p className='text-sm text-[#A2A2A2]'>
 								Add your requests, set priorities, and we’ll tackle them from
@@ -41,7 +41,10 @@ function HowIt() {
 									className='m-auto animate-pulse cursor-pointer'
 								/>
 							) : (
-								<div className='mt-[48px] animista-two max-w-[11.625rem] mx-auto shadow-lg rounded-md p-2'>
+								<div
+									className='mt-[48px] animista-two max-w-[11.625rem] mx-auto shadow-lg rounded-md p-2'
+									onClick={() => setLogoOpen(!logoOpen)}
+								>
 									<h1 className='text-[0.625rem] font-normal text-[#A1A1AA]'>
 										Mete @ Define
 									</h1>

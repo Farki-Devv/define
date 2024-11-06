@@ -6,7 +6,7 @@ import { FaMeta, FaWebflow } from 'react-icons/fa6'
 import { SiAdobe } from 'react-icons/si'
 function Hero() {
 	return (
-		<div className='max-w-[40rem] mx-auto py-[5.875rem] flex flex-col gap-[1.375rem]'>
+		<div className='max-w-[40rem] mx-auto py-[90px] flex flex-col gap-[22px]'>
 			<div className='flex flex-col text-2xl text-center'>
 				<span>Limitless innovation.</span>
 				<span className='text-neutral-400 tracking-wide'>
@@ -27,9 +27,9 @@ function Hero() {
 					View Work
 				</Button>
 			</div>
-			<div className='flex gap-[44px] justify-center items-center '>
-				<FaMeta className='size-6 text-colors-customGray hover:text-gray-900' />
-				<SiAdobe className='size-6 text-colors-customGray hover:text-gray-900' />
+			<div className='flex flex-wrap gap-[44px] justify-center items-center '>
+				<FaMeta className='size-6 text-colors-customGray hover:text-blue-400' />
+				<SiAdobe className='size-6 text-colors-customGray hover:text-red-600' />
 				<svg
 					width='58'
 					height='15'
@@ -57,8 +57,8 @@ function Hero() {
 						</clipPath>
 					</defs>
 				</svg>
-				<FaFigma className='size-6 text-colors-customGray hover:text-gray-900' />
-				<FaWebflow className='size-6 text-colors-customGray hover:text-gray-900' />
+				<FaFigma className='size-6 text-colors-customGray hover:text-red-600' />
+				<FaWebflow className='size-6 text-colors-customGray hover:text-blue-600' />
 				<svg
 					width='22'
 					height='23'

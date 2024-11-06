@@ -28,7 +28,7 @@ export default function ChatMessages() {
 	const [messages, setMessages] = useState<Message[]>(initialMessages)
 	const [active, setActive] = useState(false)
 	return (
-		<div className='max-w-[24.625rem] shadow-lg w-full rounded-lg py-4 px-3.5 flex flex-col items-center'>
+		<div className='md:max-w-[24.625rem] h-[287px] shadow-lg w-full rounded-lg py-4 px-3.5 flex flex-col items-center'>
 			<div className='mt-6'>
 				{messages.map(message => (
 					<div
@@ -36,7 +36,7 @@ export default function ChatMessages() {
 						className={`w-[240px] ${
 							active ? 'w-[230px] animista-two' : ''
 						} h-[69px] bg-[#FAFAFA] p-1.5 rounded-lg drop-shadow flex gap-2 cursor-pointer`}
-						onClick={() => setActive(!active)}
+						onClick={() => setActive(true)}
 					>
 						<img src={message.avatar} alt='' className='size-5' />
 						<div className='flex flex-col'>
@@ -60,7 +60,7 @@ export default function ChatMessages() {
 					</div>
 				</div>
 			)}
-			<div className='absolute w-[365px] mt-44'>
+			<div className='absolute md:w-[380px] max-md:px-4 mt-[170px] ml-[14px]'>
 				<h1 className='text-sm mt-6 text-start'>Direct Contact</h1>
 				<p className='text-[#A2A2A2] text-sm'>
 					Communication’s easy—you’ll work one-on-one with a designer from our

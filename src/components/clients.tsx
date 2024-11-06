@@ -48,7 +48,7 @@ export default function Clients() {
 				{clients.map(item => (
 					<div
 						key={item.nick}
-						className='flex flex-col gap-4 w-[640px] hover:scale-103 transition-all bg-[#FFFFFF] drop-shadow rounded-2xl py-4 px-3.5'
+						className='flex flex-col gap-4 max-w-[640px] hover:scale-103 transition-all bg-[#FFFFFF] drop-shadow rounded-2xl py-4 px-3.5'
 					>
 						<div className='flex justify-between'>
 							<div className='flex flex-col text-sm'>
@@ -62,11 +62,11 @@ export default function Clients() {
 				))}
 			</div>
 
-			<div className='grid grid-cols-2 gap-4 '>
+			<div className='grid grid-cols-2 max-md:grid-cols-1 gap-4 justify-items-center'>
 				{gridClinet.map(item => (
 					<div
 						key={item.nick}
-						className='flex flex-col gap-4 w-[19.5rem] hover:scale-103 transition-all bg-[#FFFFFF] drop-shadow rounded-2xl h-[14.375rem] py-4 px-3.5'
+						className='flex flex-col gap-4 max-w-[19.5rem] max-md:w-full hover:scale-103 transition-all bg-[#FFFFFF] drop-shadow rounded-2xl h-[14.375rem] py-4 px-3.5'
 					>
 						<div className='flex justify-between'>
 							<div className='flex flex-col text-sm'>

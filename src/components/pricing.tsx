@@ -24,7 +24,7 @@ export default function Pricing() {
 		<div className='max-w-[40rem] mx-auto px-4 space-y-6'>
 			<div className='text-center flex flex-col'>
 				<h2 className='text-2xl'>Pricing</h2>
-				<p className='text-muted-foreground'>
+				<p className='text-[#A2A2A2] text-sm'>
 					Weve got a variety of plans designed to fit your needs. Whether youre
 					looking for a flat-rate project, a flexible subscription, or a mix of
 					both.
@@ -49,8 +49,8 @@ export default function Pricing() {
 				</div>
 				<div className='flex flex-col gap-3'>
 					{pricing.map(item => (
-						<div key={item.name} className='flex gap-2'>
-							<span className='size-5 rounded-full bg-[#A3A3A3] flex items-center justify-center'>
+						<div key={item.name} className='flex px-0.5 items-center gap-2'>
+							<span className='size-4 rounded-full bg-[#A3A3A3] flex items-center justify-center'>
 								<Check className='size-3 text-white' />
 							</span>
 							<span className='text-sm text-[#A2A2A2]'>{item.name}</span>
