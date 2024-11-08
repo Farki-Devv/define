@@ -66,7 +66,7 @@ export default function Clients() {
 				{gridClinet.map(item => (
 					<div
 						key={item.nick}
-						className='flex flex-col gap-4 max-w-[19.5rem] max-md:w-full hover:scale-103 transition-all bg-[#FFFFFF] drop-shadow rounded-2xl h-[14.375rem] py-4 px-3.5'
+						className='flex flex-col gap-4 md:max-w-[19.5rem] max-md:w-full hover:scale-103 transition-all bg-[#FFFFFF] drop-shadow rounded-2xl h-[14.375rem] py-4 px-3.5'
 					>
 						<div className='flex justify-between'>
 							<div className='flex flex-col text-sm'>

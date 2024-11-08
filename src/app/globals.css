@@ -80,9 +80,13 @@ body {
 	* {
 		@apply border-border;
 	}
+	.svg-path-ft:hover {
+		fill-opacity: 1;
+		@apply fill-[#f5d3b5];
+	}
 	.svg-path:hover {
 		fill-opacity: 1;
-		@apply fill-blue-600;
+		@apply fill-[#000000];
 	}
 	body {
 		@apply bg-background text-foreground;
